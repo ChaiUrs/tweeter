@@ -1,27 +1,35 @@
 
-form {
-  margin-bottom: 120px;
-}
-
-textarea {
+.form-submit {
+  background-color: transparent;
+  border-bottom: 4px solid  black;
   width: 100%;
-  height: 40px;
-  border: 0;
-  background-color: #ffffff;
-  border-bottom: 2px solid black;
-  color: #f7b709;
-  vertical-align: middle;
+  height: 50px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: left;
 }
 
-input {
+.tweetbutton {
+  background-color: rgb(9, 61, 231);
+  float: left;
   font-family: 'Bungee', cursive;
   color: #FFFFFF;
-  background-color: rgb(8, 64, 248)
+  border-radius: 6px;
+  padding: 15px;
+}
+
+input[type="submit"]:hover {
+  background-color: #bb7813;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
 }
 
 .counter {
   font-family: 'Bungee', cursive;
-  color: #f7b709;
+  color: #801b02;
   float: right;
+}
+
+h2 {
+  font-family: 'Bungee', cursive;
+  text-align: left;
 }
 

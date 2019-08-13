@@ -15,22 +15,20 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: 'Roboto', sans-serif;
-  font-family: 'Bungee', cursive;
+  color: #244751;
+  background-color: #eeeeee;
+  margin: 0;
+  font-size: 22px;
+  font-family: 'Roboto Condensed', sans-serif;  
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main.container {
-  width: 450px;
-  height: 100%;
-  background: #ffffff;
-  margin: auto;
-  padding: 100px 0 70px 0;
- }
+ .main-content {
+  text-align: center;
+  margin-left: 8%;
+  margin-right: 8%;
+}
 
