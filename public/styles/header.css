@@ -1,0 +1,39 @@
+
+/* .main-header {
+  position: absolute;
+  top: 120px;
+  z-index: 9;
+  padding-bottom: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+.display-header {
+  background-color: rgb(202, 129, 20);
+  background-image: url(https://www.transparenttextures.com/patterns/brushed-alum.png);
+  height: 400px;
+  box-sizing: border-box;
+}
+
+.username {
+  color:#fdef2c;
+} */
+
+
+header {
+  height: 380px;
+  margin-top: 120px;
+  left: 0px;
+  right: 0px;
+  position: relative; 
+  background-color: rgb(248, 191, 35);
+  background-image: url(https://www.transparenttextures.com/patterns/brushed-alum.png);
+}
+
+header > div {
+  text-align: center;
+}
+
+header > div > h2 {
+  margin: 0;
+}
