@@ -7,37 +7,34 @@
   height: 120px;
   width: 100%;
   font-family: 'Bungee', cursive;
-  background-color: rgb(7, 70, 245);
-  color: #e8f8f8;
-  padding: 1.5em;
+  background-color: rgb(29, 161, 242);
+  color: #ffffff;
+  padding: 1.6em;
   z-index: 10;
 }
 
 .header {
-  float: left;
-  margin-left: 10px;
+  /* float: left; */
+  margin-left: 20px;
   font-size: 3em;
   line-height: 2.5;
 }
 
 .nav-text {
-  font-size: 1.3em;
-  color: white;
+  font-size: 1.5em;
+  color: #ffffff;
 }
 
 #composeButton {
   float: right;
-  margin-left: 10px;
-  font-size: 0.8em;
-  margin: 10px;
+  margin-left: 20px;
+  font-size: 0.7em;
+  margin-right: 20px;
   padding: 15px;
-  background-color: rgb(7, 70, 245);
-  color: #ffffff;
-}
-
-#composeButton > span {
-  float: left;
-  margin-right: 5px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(29, 161, 242);
+  border: 2px;
+  border-radius: 20px;
 }
 
 #composeButton > p {
@@ -46,7 +43,7 @@
 }
 
 #composeButton:hover {
-  background-color: #bb7813;
+  background-color: #f7f32f;
   background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
   cursor: pointer;
 }
