@@ -1,0 +1,82 @@
+
+.tweets-container {
+  border: 2px #545149 solid;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.tweets-container:hover {
+  box-shadow: 10px 10px rgb(247, 208, 208);
+}
+
+.tweets-container header {
+  background-color: #f4faa8;
+  width: 100%;
+  margin: 5px 0 10px 0;
+  height: 80px;
+  padding: 5px;
+}
+
+.header-image {
+  float: left;
+  width: 70px;
+  height: 60px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.header-name {
+  float: left;
+  margin: 10px;
+  padding-left: 3px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgb(114, 32, 45);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.handler-text {
+  float: right;
+  color: rgb(243, 171, 171);
+  font-weight: bold;
+  font-size: 1em;
+  display: none;
+  padding: 10px;
+}
+
+.tweets-container:hover .handler-text {
+  display: inline;
+}
+
+.main-text {
+  border-bottom: 4px #545149 solid;
+  background-color: transparent;
+  padding: 30px;
+  text-align: center;
+  font-size: 1em;
+  font-family: 'Arial', sans-serif;
+}
+
+.tweet-footer {
+  background-color: #f4faa8;
+  width: 100%;
+  margin: 5px 0 5px 0;
+  height: 40px;
+  padding: 1rem;
+}
+
+.days-ago {
+  font-size: 1rem;
+  float: left;
+  padding-left: 5px;
+}
+
+.tweet-icons {
+  float: right;
+  color: rgb(9, 61, 231);
+  font-size: 1.1rem;
+  padding-right: 5px;
+}
+

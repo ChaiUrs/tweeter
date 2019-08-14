@@ -14,19 +14,20 @@ html {
  * Global layout stuff
  */
 
+
 body {
   color: #03473e;
   background-color: #eeeeee;
   margin: 0;
   font-size: 22px;
-  font-family: 'Source Sans Pro', sans-serif; 
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .main-content {
+ main.container {
   text-align: center;
   margin-left: 15%;
   margin-right: 15%;

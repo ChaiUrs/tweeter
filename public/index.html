@@ -10,18 +10,19 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bungee|Roboto:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="./styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="./styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="./styles/header.css" type="text/css" />
     <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/article-tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="./vendor/jquery-2.2.3.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     
     <!-- App JS -->
     <script type="text/javascript" src="./scripts/app.js"></script>
@@ -34,13 +35,13 @@
     <nav id='nav-bar'>
       <div id="header">
         <span class="fa-stack fa-lg">
-          <i class="fa fa-circle-o-notch fa-stack-2x fa-spin"></i>
-          <i class="fa fa-twitter fa-stack-1x"></i>
+          <i class="fas fa-circle-notch fa-stack-2x fa-spin"></i>
+          <i class="fab fa-twitter fa-stack-1x"></i>
         </span>
         <span class="nav-text">TWEETER</span>
 
         <div id="composeButton">
-          <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+          <span><i class="fas fa-edit"></i></span>
           <p>COMPOSE TWEET</p>
         </div>
       </div>
@@ -48,24 +49,41 @@
 
     <header>
       <div>
-        <img src="./images/avatar-profile.png" class="img"> 
+        <img src="./images/avatar-profile.png"> 
       </div> 
-      <br>
       <div>
         <h2 class="h2-center">Your Name</h2>
       </div>
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container main-content">
+    <main class="container">
       <section class="new-tweet">
-        <h2>Write a new Tweet</h2>
-        <form method="POST" action="/tweets/"">
+        <h2 class="h2-left">Write a new Tweet</h2>
+        <form method="POST" action="/tweets/">
           <textarea class="form-submit" name="text" placeholder="What are you humming about?"></textarea>
           <input class="tweetbutton tweetbutton:hover" type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
+    
+        <article class="tweets-container">
+          <header>
+            <img class="header-image" src='./images/avatar-profile.png'>
+            <span class="header-name">Chai</span>
+            <span class="handler-text">@chai</span>
+          </header>
+          <main class="main-text">Hello! from Lighthouse Labs</main>
+          <footer class="tweet-footer">
+            <span class="days-ago">5 days ago</span>
+            <span class="tweet-icons">
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>
+            </span>
+          </footer>
+        </article>
+      
     </main>
   </body>
 </html>
