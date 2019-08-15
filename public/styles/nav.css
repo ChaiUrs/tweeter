@@ -2,6 +2,8 @@
 #nav-bar {
   position: fixed;
   top: 0;
+  left:0;
+  right: 0;
   height: 120px;
   width: 100%;
   font-family: 'Bungee', cursive;
@@ -13,8 +15,11 @@
 
 .header {
   margin-left: 20px;
-  font-size: 3em;
-  line-height: 2.5;
+  font-size: 1em;
+}
+
+.fa-twitter {
+  color: gold;
 }
 
 .nav-text {
@@ -22,26 +27,62 @@
   color: #ffffff;
 }
 
-#composeButton {
+.composeButton {
   float: right;
-  margin-left: 20px;
-  font-size: 0.7em;
-  margin-right: 20px;
-  padding: 15px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(29, 161, 242);
-  border-radius: 20px;
-  font-family: 'Bungee', cursive;
+  margin-right: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color:  #ffffff;
+  font-size: 0.8em;
+  text-align: center;
 }
 
-#composeButton > p {
-  margin: 0;
-  display: inline;
+.fa-edit {
+color: rgb(75, 2, 2);
 }
 
-#composeButton:hover {
-  background-color: #fffb04;
-  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+.fa-angle-double-down {
+  color: rgb(75, 2, 2);
+  font-size: 2em;
+  padding: 15px; 
+}
+
+.composeButton:hover {
+  background-color: rgb(243, 230, 93);;
   cursor: pointer;
 }
+
+@keyframes bounce {
+  0%,  
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.fa-angle-double-down {
+animation: bounce 1.0s infinite;
+}
+
+
+/* 
+.fa-angle-double-down:hover {
+  background-color: gold;
+  cursor: pointer;
+}  */
+
+
+/* .composeButton {
+  float: right;
+  margin-left: 20px;
+  margin-right: 40px;
+  font-size: 0.7em;
+  padding: 15px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(29, 161, 242);
+  border-radius: 20px;
+  font-family: 'Bungee', cursive;
+  text-align: center;
+} */
 
