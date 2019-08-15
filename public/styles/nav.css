@@ -29,10 +29,10 @@
 
 .composeButton {
   float: right;
-  margin-right: 30px;
-  font-family: 'Source Sans Pro', sans-serif;
-  color:  rgb(255, 255, 255);
-  font-size: 0.9em;
+  margin-right: 20px;
+  font-family: 'Archivo Narrow', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 1em;
   text-align: center;
 }
 
@@ -41,14 +41,15 @@ color: gold;
 }
 
 .fa-chevron-circle-down {
-  font-size: 2.2em;
-  padding: 5px;
+  font-size: 2em;
+  padding: 2px;
   text-align: center;
 }
 
 .fa-chevron-circle-down:hover {
-  background: rgb(245, 156, 156);
-  border-radius: 40%;
+  background: rgb(245, 110, 19);
+  /* background: rgb(245, 119, 119); */
+  border-radius: 30%;
   cursor: pointer;
 }
 
