@@ -1,5 +1,22 @@
 
 "use strict";
+
+/*** Global Functions ***/
+
+const remainingChars = function() {
+  return 140 - $("textarea").val().length;
+}
+
+const updateCounter = function(charsCount) {
+  $("span.counter").text(charsCount);
+  if (charsCount < 0) {
+    $("span.counter").addClass('red');
+  } else {
+    $("span.counter").removeClass('red');
+  }
+}
+
+
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -70,15 +87,10 @@ $(document).ready(function() {
     `;
   };
   
-  const escape =  function(str) {
-    let div = document.createElement('div');
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  }
 
-  
   const renderTweets = function(tweets) {
     $("#tweets-container").empty(); //clear the container before to read all tweets
+    tweets.reverse();
     for(const tweetEle of tweets) {   //loops through tweets
       //console.log(tweets[tweetEle]);
       //calls createTweetElement for each tweet
@@ -101,11 +113,12 @@ $(document).ready(function() {
     event.preventDefault(); // to prevent the default form submission behaviour
     
     //Form Validation
+    $(".error").slideUp();
     const $tweetCount = $("section.new-tweet > form > textarea.form-submit")
     if ($tweetCount.val() === null || $tweetCount.val() === "") {
-      alert("ERROR: This field cannot be empty! Please input some text.");
+      $(".error").text("ERROR: This field cannot be empty! Please input some text.").slideDown();
     } else if ($tweetCount.val().length > 140) {
-      alert("Ho Ho Ho! Your message is way too much!!!");
+      $(".error").text("Your message is way too much!!!").slideDown();
     } else {
       $.ajax({
         url: "/tweets/",
@@ -113,10 +126,13 @@ $(document).ready(function() {
         data: $(this).serialize()
       })
       .then(() => {
+        $textarea.val("");
+        updateCounter(remainingChars());
         refreshTweets();
-      })
+        $textarea.focus();
+      });
     }
-  })
+  });
 
 
   //Expands new tweet form when scroll down tweet button is clicked
