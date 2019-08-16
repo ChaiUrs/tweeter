@@ -63,29 +63,34 @@ $(document).ready(function() {
     }
   };
   
-  
+  //Converts single tweet object into jQuery HTML
   const createTweetElement = function(tweetsObj) {
-    return `
-    <article class="tweets-container">
-      <header>
-      <img class="header-image" src="${tweetsObj.user.avatars}">
-        <span class="header-name">${tweetsObj.user.name}</span>
-        <span class="handler-text">${tweetsObj.user.handle}</span>
-      </header>
-      <main class="main-text">
-        ${tweetsObj.content.text}
-      </main>
-      <footer class="tweet-footer">
-        <span class="days-ago">${timeDifference(Date.now(), tweetsObj.created_at)}</span>
-        <span class="tweet-icons">
-        <i class="fas fa-flag"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="fas fa-heart"></i>
-        </span>
-      </footer>
-    </article>
-    `;
+    const $avatar = $('<img class="header-image">').attr('src', tweetsObj.user.avatars);
+    const $username = $('<span class="header-name">').text(`${tweetsObj.user.name}`);
+    const $handle = $('<span class="handler-text">').text(`${tweetsObj.user.handle}`);
+    const $header = $('<header>')
+    .append($avatar)
+    .append($username)
+    .append($handle);
+
+    const $main = $('<main class="main-text">').text(`${tweetsObj.content.text}`);
+
+    const $timeDifference = $('<span class="days-ago">').text(`${timeDifference(Date.now(), tweetsObj.created_at)}`);
+    const $tweetIcons = $('<span class="tweet-icons">')
+    .append('<i class="fas fa-flag"></i>')
+    .append('<i class="fas fa-retweet"></i>')
+    .append('<i class="fas fa-heart"></i>');
+
+    const $footer = $('<footer class="tweet-footer">')
+    .append($timeDifference)
+    .append($tweetIcons);
+
+    return $('<article class="tweets-container">')
+    .append($header)
+    .append($main)
+    .append($footer);
   };
+
   
   //Expands new tweet form when scroll down tweet button is clicked.
   $("#composeButton").on("click", function() {
@@ -96,7 +101,7 @@ $(document).ready(function() {
 
   const renderTweets = function(tweets) {
     $("#tweets-container").empty(); //clears the container before reading all tweets
-    tweets.reverse(); //to dispaly tweets in chronological order
+    tweets.reverse(); //to dispaly tweets in reverse-chronological order
     for(const tweetEle of tweets) {   //loops through all tweets
       //calls createTweetElement for each tweet
       //takes return value and appends it to the tweets-container
@@ -114,7 +119,9 @@ $(document).ready(function() {
     .then(function(tweets) {
       renderTweets(tweets);
     })
-    .fail(error => console.log(error.statusText));
+    .fail(function() {
+      alert("Failed to retrieve tweets data!!");
+    });
   }
   loadTweets();
   
@@ -146,7 +153,9 @@ $(document).ready(function() {
         updateCharCounter(); //resets the tweet length to 140
         loadTweets(); //loads the latest tweet message without having to refresh the page
       })
-      .fail(error => console.log(error.statusText));
+      .fail(function() {
+        alert("Something went wrong!!");
+      });
     }
   });
   
