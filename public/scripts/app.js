@@ -1,21 +1,21 @@
 
 "use strict";
 
-/*** Global Functions ***/
-
-const remainingChars = function() {
-  return 140 - $("textarea").val().length;
-}
-
-const updateCounter = function(charsCount) {
-  $("span.counter").text(charsCount);
-  if (charsCount < 0) {
-    $("span.counter").addClass('red');
+/*** Global Function ***/
+const updateCharCounter = function() {
+  $maxtextLength = 140; //maximum tweet length
+  $textChars = $("textarea").val().length; //determine the length of 'this' value => which is user input in the 'textarea'
+  $charsLeft = $maxtextLength - $textChars;
+  
+  //'form'=>parent element finds the respective sibling element => 'counter'
+  $(".counter").text($charsLeft); //sets the value of 'text' to 'charsLeft'
+  //when the text exceeds the max text length(140) => charsLeft becomes negative and following changes occur
+  if ($charsLeft < 0) {
+    $(".counter").css({'color': '#fd0707'}); //changes to color red
   } else {
-    $("span.counter").removeClass('red');
+    $(".counter").css({'color': '#034058'}); //remains in original color
   }
 }
-
 
 /*
  * Client-side JS logic goes here
@@ -87,66 +87,68 @@ $(document).ready(function() {
     `;
   };
   
+  //Expands new tweet form when scroll down tweet button is clicked.
+  $("#composeButton").on("click", function() {
+    $(".new-tweet").slideToggle();
+    $("textarea").focus();
+  });
+
 
   const renderTweets = function(tweets) {
-    $("#tweets-container").empty(); //clear the container before to read all tweets
-    tweets.reverse();
-    for(const tweetEle of tweets) {   //loops through tweets
-      //console.log(tweets[tweetEle]);
+    $("#tweets-container").empty(); //clears the container before reading all tweets
+    tweets.reverse(); //to dispaly tweets in chronological order
+    for(const tweetEle of tweets) {   //loops through all tweets
       //calls createTweetElement for each tweet
-      //takes return value and appends it to the tweets container
+      //takes return value and appends it to the tweets-container
       $("#tweets-container").append(createTweetElement(tweetEle));
     }
   };
   
 
-  //this function will use jQuery to make a request to /tweets and receive the array of tweets as JSON.
+  //this function will use jQuery to make a request to "/tweets/" and receive an array of tweets as JSON.
   const loadTweets = function() {
-    return $.ajax({
+    $.ajax({
       url: "/tweets/",
       type: "GET",
     })
+    .then(function(tweets) {
+      renderTweets(tweets);
+    })
+    .fail(error => console.log(error.statusText));
   }
+  loadTweets();
   
 
-  $("section.new-tweet > form").on("submit", function(event) {
-    event.preventDefault(); // to prevent the default form submission behaviour
-    
-    //Form Validation
+  //Form Validation
+  $("form").on("submit", function(event) {
+    event.preventDefault(); //to prevent the default form submission behaviour
     $(".error").slideUp();
-    const $tweetCount = $("section.new-tweet > form > textarea.form-submit")
-    if ($tweetCount.val() === null || $tweetCount.val() === "") {
-      $(".error").text("ERROR: This field cannot be empty! Please input some text.").slideDown();
-    } else if ($tweetCount.val().length > 140) {
-      $(".error").text("Your message is way too much!!!").slideDown();
+    
+    if ($("textarea").val() === null || $("textarea").val() === "") {
+      $(".error").text("ERROR: This field cannot be empty! Please input some text.");
+      $(".error").slideDown();
+      return;
+
+    } else if ($("textarea").val().length > 140) {
+      $(".error").text("Your tweet is way too long!!!");
+      $(".error").slideDown();
+      return;
+
     } else {
       $.ajax({
         url: "/tweets/",
         type: "POST",
-        data: $(this).serialize()
+        //when a AJAX request is made => it creates a URL encoded string by serializing "textarea" values.
+        data: $("textarea").serialize() 
       })
       .then(() => {
-        $textarea.val("");
-        updateCounter(remainingChars());
-        refreshTweets();
-        $textarea.focus();
-      });
+        $("textarea").val("").focus(); //text area is emptied and focused to enter a new tweet
+        updateCharCounter(); //resets the tweet length to 140
+        loadTweets(); //loads the latest tweet message without having to refresh the page
+      })
+      .fail(error => console.log(error.statusText));
     }
   });
-
-
-  //Expands new tweet form when scroll down tweet button is clicked
-  $(".composeButton").on("click", function() {
-    $(".new-tweet").slideToggle();
-    $("textarea").focus();
-  });
-
-   //Load and Render tweets
-   const refreshTweets = function() {
-    loadTweets()
-    .then(renderTweets)
-    .fail(error => console.log(error.statusText));
-  }
-  refreshTweets();
+  
 });
 

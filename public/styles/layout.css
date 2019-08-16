@@ -18,17 +18,32 @@ body {
   color: #03473e;
   background-color: #eeeeee;
   margin: 0;
-  font-size: 22px;
+  font-size: 20px;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+main.container {
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main.container {
-  text-align: center;
-  margin-left: 15%;
-  margin-right: 15%;
+ #scrolltoTop {
+  font-size: 2.5em;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  display: none;
+}
+
+#scrolltoTop:hover {
+  background: yellow;
+  font-size: 3em;
+  border-radius: 10%;
+  cursor: pointer;
 }
 

@@ -4,8 +4,8 @@
 
 $(document).ready(function() {
   
-  $(".new-tweet textarea").on("keyup keypress", function(event) {
-
+  $("textarea").on("keyup", function(event) {
+    
     $maxtextLength = 140; //maximum tweet length
     $textChars = $(this).val().length; //determine the length of 'this' value => which is user input in the 'textarea'
     $charsLeft = $maxtextLength - $textChars;

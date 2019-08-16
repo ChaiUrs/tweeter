@@ -3,8 +3,9 @@
   border: 2px #545149 solid;
   border-radius: 20px;
   padding: 10px;
-  margin-top: 4em;
-  margin-bottom: 4em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  word-wrap: break-word;
 }
 
 .tweets-container:hover {
@@ -30,10 +31,10 @@
 .header-name {
   float: left;
   margin: 10px;
-  padding-left: 3px;
+  padding-left: 2px;
   font-family: 'Source Sans Pro', sans-serif;
   color: rgb(114, 32, 45);
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
 }
 
@@ -41,7 +42,7 @@
   float: right;
   color: rgb(243, 171, 171);
   font-weight: bold;
-  font-size: 1em;
+  font-size: 0.8em;
   display: none;
   padding: 10px;
 }
@@ -78,5 +79,13 @@
   color: rgb(9, 61, 231);
   font-size: 1.1rem;
   padding-right: 5px;
+}
+
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  #tweets-container {
+    margin-top: 80px;
+  }
 }
 

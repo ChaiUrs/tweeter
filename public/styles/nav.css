@@ -4,7 +4,7 @@
   top: 0;
   left:0;
   right: 0;
-  height: 120px;
+  height: 115px;
   width: 100%;
   font-family: 'Bungee', cursive;
   background-color: rgb(5, 136, 180);
@@ -13,43 +13,45 @@
   z-index: 1000;
 }
 
-.header {
-  margin-left: 10px;
-  font-size: 1em;
-}
-
 .fa-twitter {
   color: gold;
 }
 
 .nav-text {
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: #ffffff;
+  display: inline;
 }
 
-.composeButton {
+.navtextrightalign {
   float: right;
   margin-right: 20px;
   font-family: 'Archivo Narrow', sans-serif;
   color: rgb(255, 255, 255);
-  font-size: 1em;
+  font-size: 0.8em;
   text-align: center;
 }
 
+.navtextrightalign {
+  display: inline;
+}
+
 .fa-edit {
-color: gold;
+  font-size: 1em;
+  color: gold;
 }
 
 .fa-chevron-circle-down {
   font-size: 2em;
   padding: 2px;
   text-align: center;
+  color: rgb(255, 251, 1);
 }
 
 .fa-chevron-circle-down:hover {
-  background: rgb(245, 110, 19);
-  /* background: rgb(245, 119, 119); */
-  border-radius: 30%;
+  background: rgb(52, 2, 145);
+  border-radius: 10%;
+  font-size: 2.7em;
   cursor: pointer;
 }
 
@@ -65,5 +67,17 @@ color: gold;
 
 .fa-chevron-circle-down {
 animation: bounce 1.0s infinite;
+}
+
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 580px) {
+  #nav-bar {
+    padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+  
+  #composeButton {
+    float: none;
+    position: fixed;
+  }
 }
 

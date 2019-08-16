@@ -4,7 +4,7 @@
   <head>
     <!-- Meta Information -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width-device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>TWEETER - Home Page</title>
 
     <!-- External CSS -->
@@ -30,27 +30,25 @@
     <!-- App JS -->
     <script type="text/javascript" src="./scripts/app.js"></script>
     <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="./scripts/composer.js"></script>
 
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <div class="header">
-        <span class="fa-stack fa-lg" aria-hidden="true">
-          <i class="fas fa-circle-notch fa-stack-2x fa-spin"></i>
-          <i class="fab fa-twitter fa-stack-1x"></i>
-        </span>
-        <span class="nav-text">TWEETER</span>
-
-        <span class="composeButton">
-          <i class="fas fa-edit"></i>
-          <strong>Compose</strong> a new tweet<br>
-          <i class="fas fa-chevron-circle-down" aria-hidden="true"></i>
-        </span>
-      </div>
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle-notch fa-stack-2x fa-spin"></i>
+        <i class="fab fa-twitter fa-stack-1x"></i>
+      </span>
+      <span class="nav-text">TWEETER</span>
+      
+      <span class="navtextrightalign" id="composeButton">
+        <i class="fas fa-edit"></i>
+        <strong>Compose</strong> a new tweet<br>
+        <i class="fas fa-chevron-circle-down" aria-hidden="true"></i>
+      </span>
     </nav>
-
 
     <header>
       <div>
@@ -75,39 +73,12 @@
 
       <section id="tweets-container">
       </section>
+      
+      <a href="#TopPage">
+        <i id="scrolltoTop" class="fas fa-chevron-circle-up" aria-hidden="true"></i>
+      </a>
 
     </main>
   </body>
 </html>
-
-
-
-
-<!-- <article class="tweets-container">
-  <header>
-    <img class="header-image" src='./images/avatar-profile.png'>
-    <span class="header-name">Chai</span>
-    <span class="handler-text">@chai</span>
-  </header>
-  <main class="main-text">HELLO! from Lighthouse Labs</main>
-  <footer class="tweet-footer">
-    <span class="days-ago">5 days ago</span>
-    <span class="tweet-icons">
-      <i class="fas fa-flag"></i>
-      <i class="fas fa-retweet"></i>
-      <i class="fas fa-heart"></i>
-    </span>
-  </footer>
-</article> -->
-
-
-<!-- <div id="composeButton">
-    <span><i class="fas fa-edit"></i></span>
-    <strong>COMPOSE</strong> a new Tweet<br>
-  </div>
-  <span class="scroll-down">
-    <i class="fa fa-angle-double-down"></i>
-  </span>
-</div>
-</nav> -->
 
