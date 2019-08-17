@@ -8,12 +8,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 This four-day mini-project was completed as part of the Week-4 assignment.
 
-### Technologies used:
-- jQuery
-- Ajax
-- HTML/CSS
-- Flexbox
-
+### Key Functionalities:
 - The form data is validated on the client side using jQuery and posted to the server using an asynchronous Ajax call.
 - The tweets are refetched on submission and dynamically sent to DOM without requiring a page refresh.
 - The application is tested to prevent cross-site scripting(XSS) by sanitizing input/form data before it is sent to DOM using various jQuery metthods.
