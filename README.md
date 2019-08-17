@@ -25,6 +25,10 @@ This four-day mini-project was completed as part of the Week-4 assignment.
 
 ![Tweeter - Error message 1](https://github.com/ChaiUrs/tweeter/blob/master/docs/2.tweet-error%20message1.png)
 
+* [Tweeter - Error Message2, when user inputs the text over 140 characters, the counter changes its color to red and when tweet button is clicked, it displays appropriate message](https://github.com/ChaiUrs/tweeter/blob/master/docs/3.tweet-error%20message2.png)
+
+![Tweeter - Error message 2](https://github.com/ChaiUrs/tweeter/blob/master/docs/3.tweet-error%20message2.png)
+
 
 
 ## Getting Started
