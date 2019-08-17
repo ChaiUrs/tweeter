@@ -8,33 +8,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 This four-day mini-project was completed as part of the Week-4 assignment.
 
-## App Functionality
-
-* Single page app architecture.
-* Use ajax to communicate w/ Tweeter backend server
-
-Page Contains:
-
-- Navigation bar
-  - fixed to top
-  - contains a logo and compose button, which:
-     - Toggles display of inline compose box
-     - Auto-focuses the textarea in the compose box
-
-- Tweet compose box
-  - Contains form to submit tweet, above the tweets
-  - Form contains:
-      - validates input on submit
-        + Indicates input errors
-      - Character counter updates on keypress
-        - Turn red (or similar) when count > 140 chars
-      - Does not submit (alert feedback) if empty or count > 140
-        + should be smart enough to catch empty spaces (" ") as text [minor]
-      - refreshes tweet list when successfully submitted
-
-- List of tweets
-  - Order by post time descending (reverse chronological)
-
 
 ## Final Product
 
@@ -55,3 +28,6 @@ Page Contains:
 * [mongodb](https://github.com/mongodb/node-mongodb-native) - MongoDB driver for Node.js
 
 
+## Dev Dependencies
+
+* [nodemon](https://nodemon.io/) - A utility to monitor for any changes in your source and automatically restart your server.
