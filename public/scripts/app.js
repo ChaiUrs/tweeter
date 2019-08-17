@@ -94,8 +94,10 @@ $(document).ready(function() {
   
   //Expands new tweet form when scroll down tweet button is clicked.
   $("#composeButton").on("click", function() {
+    $(".error").slideUp();
     $(".new-tweet").slideToggle();
-    $("textarea").focus();
+    $("textarea").val("").focus();
+    updateCharCounter();  
   });
 
 
