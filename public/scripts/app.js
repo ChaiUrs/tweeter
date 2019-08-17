@@ -135,19 +135,17 @@ $(document).ready(function() {
     event.preventDefault(); //to prevent the default form submission behaviour
     
     if ($("textarea").val() === null || $("textarea").val() === "") {
-      $(".error").text("ERROR: This field cannot be empty. Please input some text").slideDown(400, function() {
-        setTimeout(function () {
-          $(".error").text("ERROR: This field cannot be empty. Please input some text").slideUp(400);
-        }, 1200);
-      });
+      $(".error").text("ERROR: This field cannot be empty. Please input some text")
+      .slideDown()
+      .delay(1200)
+      .fadeOut(300);
       return;
 
     } else if ($("textarea").val().length > 140) {
-      $(".error").text("Your tweet is way too much and out of limit!!!").slideDown(400, function() {
-        setTimeout(function() {
-          $(".error").text("Your tweet is way too much and out of limit!!!").slideUp(400);
-        }, 1200);
-      });
+      $(".error").text("Your tweet is way too much and out of limit!!!")
+      .slideDown()
+      .delay(1200)
+      .fadeOut(300);
       return;
 
     } else {
@@ -158,6 +156,7 @@ $(document).ready(function() {
         data: $("textarea").serialize() 
       })
       .then(() => {
+        $(".success").text("Your tweet was sent.").slideDown().delay(1200).fadeOut(300);
         $("textarea").val("").focus(); //text area is emptied and focused to enter a new tweet
         updateCharCounter(); //resets the tweet length to 140
         loadTweets(); //loads the latest tweet message without having to refresh the page

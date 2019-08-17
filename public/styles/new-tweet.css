@@ -54,6 +54,19 @@ input[type="submit"]:hover {
   padding: 1em;
 }
 
+.success {
+  display: none;
+  width: 50%;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  color: rgb(3, 94, 38);
+  border-radius: 10px;
+  border: rgb(3, 94, 38) solid;
+  margin: 1em;
+  padding: 1em;
+}
+
 @media only screen and (min-width: 1024px) {
   .new-tweet {
     margin-top: 40px;
