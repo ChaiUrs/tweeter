@@ -23,7 +23,7 @@ This four-day mini-project was completed as part of the Week-4 assignment.
 ## Dependencies
 
 * [Express](http://expressjs.com/) - Web application server framework
-* [Node 5.10.x or above](https://github.com/nodejs/node#current-and-lts-releases) - Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+* [Node 5.10.x or above](https://github.com/nodejs/node#current-and-lts-releases) - Node.js is a JavaScript runtime.
 * [body-parser](https://github.com/expressjs/body-parser#readme) - Node.js body parsing middleware
 * [Chance](http://chancejs.com/) - Generator of random strings and numbers
 * [MD5](https://github.com/pvorb/node-md5#readme) - JavaScript function for hashing messages
