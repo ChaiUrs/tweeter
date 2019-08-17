@@ -48,9 +48,10 @@ Page Contains:
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
-- body-parser
-- chance
-- md5
-- MongoDB
+* [Express](http://expressjs.com/) - Web application server framework
+* [body-parser](https://github.com/expressjs/body-parser#readme) - Node.js body parsing middleware
+* [Chance](http://chancejs.com/) - Generator of random strings and numbers
+* [MD5](https://github.com/pvorb/node-md5#readme) - JavaScript function for hashing messages
+* [mongodb](https://github.com/mongodb/node-mongodb-native) - MongoDB driver for Node.js
+
+
