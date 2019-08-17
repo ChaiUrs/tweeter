@@ -33,7 +33,7 @@ This four-day mini-project was completed as part of the Week-4 assignment.
 
 ![Tweeter - Box shadow and hover](https://github.com/ChaiUrs/tweeter/blob/master/docs/5.%20tweet-hover%20and%20box%20shadow.png)
 
-* [Tweeter - Success Message => when valid tweet is submitted, it displays with successful message and updates the page without refreshing it.](https://github.com/ChaiUrs/tweeter/blob/master/docs/5.%20tweet-success.png)
+* [Tweeter - Success Message => when valid tweet is submitted, it displays with successful message, resets the counter & text area and updates the page with new tweet without refreshing it.](https://github.com/ChaiUrs/tweeter/blob/master/docs/5.%20tweet-success.png)
 
 ![Tweeter - Success Message](https://github.com/ChaiUrs/tweeter/blob/master/docs/5.%20tweet-success.png)
 
