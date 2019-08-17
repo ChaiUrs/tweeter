@@ -1,3 +1,6 @@
+#  Twitter Project Functional Requirements
+
+
 ## Functional Requirements
 * Primarily a client-side Single Page App (SPA)
 * The client-side app communicates with a server via AJAX
