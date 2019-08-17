@@ -21,6 +21,10 @@ This four-day mini-project was completed as part of the Week-4 assignment.
 
 ![Tweeter - Home Page](https://github.com/ChaiUrs/tweeter/blob/master/docs/1.%20tweet-compose.png)
 
+* [Tweeter - Error Message1, when the text area is empty and tweet button is clicked, it displays error message](https://github.com/ChaiUrs/tweeter/blob/master/docs/2.tweet-error%20message1.png)
+
+![Tweeter - Error message 1](https://github.com/ChaiUrs/tweeter/blob/master/docs/2.tweet-error%20message1.png)
+
 
 
 ## Getting Started
