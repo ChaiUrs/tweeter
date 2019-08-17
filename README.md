@@ -1,4 +1,4 @@
-# Tweeter (SPA) Project (Lighthouse Labs)
+# Tweeter (##SPA) Project (Lighthouse Labs)
 
 Tweeter is a simple, single-page Twitter clone.
 
