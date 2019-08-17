@@ -17,7 +17,9 @@ This four-day mini-project was completed as part of the Week-4 assignment.
 
 ## Final Product - Project Screenshots
 
-![Tweeter - Home Page, when compose button is clicked => new tweet form slides down with textarea in focus.](https://github.com/ChaiUrs/tweeter/blob/master/docs/1.%20tweet-compose.png)
+* [Tweeter - Home Page, when compose button is clicked => new tweet form slides down with textarea in focus.](https://github.com/ChaiUrs/tweeter/blob/master/docs/1.%20tweet-compose.png)
+
+![Tweeter - Home Page](https://github.com/ChaiUrs/tweeter/blob/master/docs/1.%20tweet-compose.png)
 
 
 
