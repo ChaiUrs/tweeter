@@ -17,23 +17,19 @@ This four-day mini-project was completed as part of the Week-4 assignment.
 
 ## Final Product - Project Screenshots
 
-* [Tweeter - Home Page, when compose button is clicked => new tweet form slides down 
-with textarea in focus.](https://github.com/ChaiUrs/tweeter/blob/master/docs/1.%20tweet-compose.png)
+* [Tweeter - Home Page, when compose button is clicked => new tweet form slides down with textarea in focus.](https://github.com/ChaiUrs/tweeter/blob/master/docs/1.%20tweet-compose.png)
 
 ![Tweeter - Home Page](https://github.com/ChaiUrs/tweeter/blob/master/docs/1.%20tweet-compose.png)
 
-* [Tweeter - Error Message1, when the text area is empty and tweet button is clicked, 
-it displays error message.](https://github.com/ChaiUrs/tweeter/blob/master/docs/2.tweet-error%20message1.png)
+* [Tweeter - Error Message1, when the text area is empty and tweet button is clicked, it displays error message.](https://github.com/ChaiUrs/tweeter/blob/master/docs/2.tweet-error%20message1.png)
 
 ![Tweeter - Error message 1](https://github.com/ChaiUrs/tweeter/blob/master/docs/2.tweet-error%20message1.png)
 
-* [Tweeter - Error Message2, when user inputs the text over 140 characters, counter changes its 
-color to red and when tweet button is clicked, it displays appropriate message.](https://github.com/ChaiUrs/tweeter/blob/master/docs/3.tweet-error%20message2.png)
+* [Tweeter - Error Message2, when user inputs the text over 140 characters, counter changes its color to red and when tweet button is clicked, it displays appropriate message.](https://github.com/ChaiUrs/tweeter/blob/master/docs/3.tweet-error%20message2.png)
 
 ![Tweeter - Error message 2](https://github.com/ChaiUrs/tweeter/blob/master/docs/3.tweet-error%20message2.png)
 
-* [Tweeter - Box shadow and hover, when the cursor is hovered over text area, 
-the shadow on tweet box and children elements (handle text & tweet icons) appears](https://github.com/ChaiUrs/tweeter/blob/master/docs/5.%20tweet-hover%20and%20box%20shadow.png)
+* [Tweeter - Box shadow and hover, when the cursor is hovered over text area, the shadow on tweet box and children elements (handle text & tweet icons) appears](https://github.com/ChaiUrs/tweeter/blob/master/docs/5.%20tweet-hover%20and%20box%20shadow.png)
 
 ![Tweeter - Box shadow and hover](https://github.com/ChaiUrs/tweeter/blob/master/docs/5.%20tweet-hover%20and%20box%20shadow.png)
 
