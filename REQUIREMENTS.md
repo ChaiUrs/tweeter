@@ -28,8 +28,8 @@
     *   displays tweets in reverse-chronological order (that is, by creation time descending)
     
 *   Individual Tweets:
-
-*   have a header, which contains the user's:
+    
+    *   have a header, which contains the user's:
         *   avatar, on the left
         *   name, on the left and after the avatar
         *   handle, on the right
