@@ -136,15 +136,17 @@ $(document).ready(function() {
     if ($("textarea").val() === null || $("textarea").val() === "") {
       $(".error").text("ERROR: This field cannot be empty. Please input some text")
       .slideDown()
-      .delay(1200)
-      .fadeOut(300);
+      .delay(1500)
+      .fadeOut(500);
       return;
 
     } else if ($("textarea").val().length > 140) {
-      $(".error").text("Your tweet is way too much and out of limit!!!")
+      $(".error").text("Your tweet is way too much!! Please enter within text limit!!!")
       .slideDown()
-      .delay(1200)
-      .fadeOut(300);
+      .delay(1500)
+      .fadeOut(500);
+      $("textarea").val("").focus();
+      updateCharCounter(); 
       return;
 
     } else {
@@ -157,8 +159,8 @@ $(document).ready(function() {
       .then(() => {
         $(".success").text("Your tweet was sent successfully.")
         .slideDown()
-        .delay(1200)
-        .fadeOut(300);
+        .delay(1500)
+        .fadeOut(500);
         $("textarea").val("").focus(); //text area is emptied and focused to enter a new tweet
         updateCharCounter(); //resets the tweet length to 140
         loadTweets(); //loads the latest tweet message without having to refresh the page
