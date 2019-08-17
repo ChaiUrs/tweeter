@@ -6,18 +6,18 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Background
 
-This four-day mini-project was completed as part of Week-4 assignment.
+This four-day mini-project was completed as part of the Week-4 assignment.
 
-## App functionality
+## App Functionality
 
 * Single page app architecture.
 * Use ajax to communicate w/ Tweeter backend server
 
 Page Contains:
 
-- Navbar
+- Navigation bar
   - fixed to top
-  - contains Compose button, which:
+  - contains a logo and compose button => which:
      - Toggles display of inline compose box
      - Auto-focuses the textarea in the compose box
 
