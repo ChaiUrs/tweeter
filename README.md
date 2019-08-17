@@ -7,7 +7,8 @@ This repository is the starter code for the project: Students will fork and clon
 ## Background
 
 This four-day mini-project was completed as part of the Week-4 assignment.
-Technologies used:
+
+# Technologies used:
 - jQuery
 - Ajax
 - HTML/CSS
