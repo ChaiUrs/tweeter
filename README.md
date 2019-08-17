@@ -30,4 +30,4 @@ This four-day mini-project was completed as part of the Week-4 assignment.
 
 ## Dev Dependencies
 
-* [nodemon](https://nodemon.io/) - A utility to monitor for any changes in your source and automatically restart your server.
+* [nodemon](https://nodemon.io/) - A utility to monitor for any changes in the source and automatically restarts the server.
