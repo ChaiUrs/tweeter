@@ -17,7 +17,7 @@ Page Contains:
 
 - Navigation bar
   - fixed to top
-  - contains a logo and compose button => which:
+  - contains a logo and compose button, which:
      - Toggles display of inline compose box
      - Auto-focuses the textarea in the compose box
 
