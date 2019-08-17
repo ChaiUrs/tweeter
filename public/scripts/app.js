@@ -155,7 +155,10 @@ $(document).ready(function() {
         data: $("textarea").serialize() 
       })
       .then(() => {
-        $(".success").text("Your tweet was sent.").slideDown().delay(1200).fadeOut(300);
+        $(".success").text("Your tweet was sent successfully.")
+        .slideDown()
+        .delay(1200)
+        .fadeOut(300);
         $("textarea").val("").focus(); //text area is emptied and focused to enter a new tweet
         updateCharCounter(); //resets the tweet length to 140
         loadTweets(); //loads the latest tweet message without having to refresh the page
