@@ -3,9 +3,9 @@
 
 /*** Global Function ***/
 const updateCharCounter = function() {
-  $maxtextLength = 140; //maximum tweet length
-  $textChars = $("textarea").val().length; //determine the length of 'this' value => which is user input in the 'textarea'
-  $charsLeft = $maxtextLength - $textChars;
+  const $maxtextLength = 140; //maximum tweet length
+  const $textChars = $("textarea").val().length; //determine the length of 'this' value => which is user input in the 'textarea'
+  const $charsLeft = $maxtextLength - $textChars;
   
   //'form'=>parent element finds the respective sibling element => 'counter'
   $(".counter").text($charsLeft); //sets the value of 'text' to 'charsLeft'
@@ -63,29 +63,30 @@ $(document).ready(function() {
     }
   };
   
+  
   //Converts single tweet object into jQuery HTML
   const createTweetElement = function(tweetsObj) {
-    const $avatar = $('<img class="header-image">').attr('src', tweetsObj.user.avatars);
-    const $username = $('<span class="header-name">').text(`${tweetsObj.user.name}`);
-    const $handle = $('<span class="handler-text">').text(`${tweetsObj.user.handle}`);
+    const $avatar = $('<img>').attr("src", `${tweetsObj.user.avatars}`).addClass("header-image");
+    const $username = $('<span>').text(`${tweetsObj.user.name}`).addClass("header-name");
+    const $handle = $('<span>').text(`${tweetsObj.user.handle}`).addClass("handler-text");
     const $header = $('<header>')
     .append($avatar)
     .append($username)
     .append($handle);
 
-    const $main = $('<main class="main-text">').text(`${tweetsObj.content.text}`);
+    const $main = $('<main>').text(`${tweetsObj.content.text}`).addClass("main-text");
 
-    const $timeDifference = $('<span class="days-ago">').text(`${timeDifference(Date.now(), tweetsObj.created_at)}`);
-    const $tweetIcons = $('<span class="tweet-icons">')
+    const $timeDifference = $('<span>').text(`${timeDifference(Date.now(), tweetsObj.created_at)}`).addClass("days-ago");
+    const $tweetIcons = $('<span>').addClass("tweet-icons")
     .append('<i class="fas fa-flag"></i>')
     .append('<i class="fas fa-retweet"></i>')
     .append('<i class="fas fa-heart"></i>');
 
-    const $footer = $('<footer class="tweet-footer">')
+    const $footer = $('<footer>').addClass("tweet-footer")
     .append($timeDifference)
     .append($tweetIcons);
 
-    return $('<article class="tweets-container">')
+    return $('<article>').addClass("tweets-container")
     .append($header)
     .append($main)
     .append($footer);
@@ -94,7 +95,6 @@ $(document).ready(function() {
   
   //Expands new tweet form when scroll down tweet button is clicked.
   $("#composeButton").on("click", function() {
-    $(".error").slideUp();
     $(".new-tweet").slideToggle();
     $("textarea").val("").focus();
     updateCharCounter();  
@@ -105,6 +105,7 @@ $(document).ready(function() {
     $("#tweets-container").empty(); //clears the container before reading all tweets
     tweets.reverse(); //to dispaly tweets in reverse-chronological order
     for(const tweetEle of tweets) {   //loops through all tweets
+
       //calls createTweetElement for each tweet
       //takes return value and appends it to the tweets-container
       $("#tweets-container").append(createTweetElement(tweetEle));
@@ -112,7 +113,8 @@ $(document).ready(function() {
   };
   
 
-  //this function will use jQuery to make a request to "/tweets/" and receive an array of tweets as JSON.
+  /* this function will use jQuery to make a request to /tweets/,
+  receives an array of tweets as JSON and updates the page. */
   const loadTweets = function() {
     $.ajax({
       url: "/tweets/",
@@ -131,16 +133,21 @@ $(document).ready(function() {
   //Form Validation
   $("form").on("submit", function(event) {
     event.preventDefault(); //to prevent the default form submission behaviour
-    $(".error").slideUp();
     
     if ($("textarea").val() === null || $("textarea").val() === "") {
-      $(".error").text("ERROR: This field cannot be empty! Please input some text.");
-      $(".error").slideDown();
+      $(".error").text("ERROR: This field cannot be empty. Please input some text").slideDown(400, function() {
+        setTimeout(function () {
+          $(".error").text("ERROR: This field cannot be empty. Please input some text").slideUp(400);
+        }, 1200);
+      });
       return;
 
     } else if ($("textarea").val().length > 140) {
-      $(".error").text("Your tweet is way too long!!!");
-      $(".error").slideDown();
+      $(".error").text("Your tweet is way too much and out of limit!!!").slideDown(400, function() {
+        setTimeout(function() {
+          $(".error").text("Your tweet is way too much and out of limit!!!").slideUp(400);
+        }, 1200);
+      });
       return;
 
     } else {

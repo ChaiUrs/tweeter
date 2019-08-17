@@ -43,12 +43,13 @@
   color: rgb(243, 171, 171);
   font-weight: bold;
   font-size: 0.8em;
-  display: none;
   padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .tweets-container:hover .handler-text {
-  display: inline;
+  opacity: 1;
 }
 
 .main-text {
@@ -79,11 +80,12 @@
   color: rgb(9, 61, 231);
   font-size: 1.1rem;
   padding-right: 5px;
-  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.tweet-icons:hover {
-  display: inline;
+.tweets-container:hover .tweet-icons {
+  opacity: 1;
 }
 
 
@@ -91,6 +93,13 @@
 @media only screen and (min-width: 1024px) {
   #tweets-container {
     margin-top: 80px;
+  }
+}
+
+/* Smartphones: minimum width of 320px to maximum width of around 420px */
+@media only screen and (min-width: 320px) {
+  #tweets-container {
+    margin-top: 50px;
   }
 }
 
