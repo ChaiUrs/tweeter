@@ -1,4 +1,4 @@
-# Tweeter Project
+# Tweeter Project (Lighthouse Labs 2019)
 
 Tweeter is a simple, single-page Twitter clone.
 
